@@ -1,4 +1,4 @@
-import SignupComponent from '@/components/SignupComponent'
+import SignupComponent from '@/components/auth/SignupComponent'
 import { authOptions } from '@/lib/auth'
 import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'

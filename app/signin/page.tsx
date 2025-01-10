@@ -1,5 +1,5 @@
 
-import SigninForm from '@/components/SigninForm'
+import SigninForm from '@/components/auth/SigninForm'
 import { authOptions } from '@/lib/auth'
 import { getServerSession } from 'next-auth'
 import Link from 'next/link'

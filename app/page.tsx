@@ -1,5 +1,5 @@
 import Appbar from "@/components/Appbar";
-import Sidebar from "@/components/Sidebar";
+import Chat from "@/components/Chat";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
@@ -12,9 +12,9 @@ export default async function Home() {
     redirect("/signin")
   }
   return (
-    <main className="min-h-screen">
+    <main className="max-h-screen ">
       <Appbar name={session.user.name} />
-      <Sidebar />
+      <Chat />
     </main>
   );
 }

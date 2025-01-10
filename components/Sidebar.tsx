@@ -1,16 +1,28 @@
 import { Plus } from 'lucide-react'
+import { Button } from '@/components/ui/button';
 import React from 'react'
-
-const Sidebar = () => {
+import { ScrollArea } from '@radix-ui/react-scroll-area';
+interface NewChatButtonProps {
+	onClick: () => void;
+	disabled: boolean;
+}
+const Sidebar = ({ onClick, disabled }: NewChatButtonProps) => {
 	return (
-		<div className="w-64 bg-gray-100 p-4 overflow-y-auto h-screen">
-			<button className="flex flex-row items-center justify-center gap-2 hover:bg-neutral-900 hover:text-white hover:border-neutral-200 px-4 py-2 border border-neutral-500 rounded-lg w-full">
+		<div className="w-64 border-r bg-background flex flex-col h-full p-4">
+			<Button 
+				onClick={onClick}
+     				disabled={disabled}
+      				variant="custom"
+      				className=" "
+			>
 				<Plus className="h-4 w-4" />
 				New Chat
-			</button>
-			<div className="mt-4">
-				<h3 className="text-lg mb-2">New Query</h3>
-			</div>
+			</Button>
+			<ScrollArea className="flex-1 px-2">
+				<div className="space-y-2 py-2">
+					{/* Chat history list here */}
+				</div>
+			</ScrollArea>
 		</div>
 	)
 }

@@ -16,7 +16,7 @@ import { redirect, useRouter } from "next/navigation"
 import { EyeClosedIcon, EyeOpenIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { signIn } from "next-auth/react"
-import Spinner from "./ui/spinner";
+import Spinner from "../ui/spinner";
  
 const formSchema = z.object({
   email: z.string().email().min(1,{
